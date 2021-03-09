@@ -3,5 +3,10 @@
  */
 
 .mainFxmlClass {
+    background: black; 
+    height: 500px;
+}
 
+.btnLogin{
+    color: black
 }
