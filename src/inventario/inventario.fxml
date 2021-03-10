@@ -8,12 +8,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="inventario.InventarioController">
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventario.InventarioController">
     <stylesheets>
         <URL value="@inventario.css" />
     </stylesheets>
    <children>
-      <TableView fx:id="tablaInventario" editable="true" layoutX="21.0" layoutY="149.0" prefHeight="239.0" prefWidth="560.0">
+      <TableView fx:id="tablaInventario" editable="true" layoutX="20.0" layoutY="161.0" prefHeight="239.0" prefWidth="560.0" style="-fx-background-color: teal;">
         <columns>
           <TableColumn prefWidth="550.0" resizable="false" text="Inventario">
                <columns>
@@ -29,7 +29,7 @@
          </columnResizePolicy>
       </TableView>
       <TextField fx:id="busca" layoutX="30.0" layoutY="113.0" promptText="Buscador Tabla" />
-      <Button layoutX="461.0" layoutY="419.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button layoutX="453.0" layoutY="419.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
       <Button layoutX="453.0" layoutY="478.0" mnemonicParsing="false" onAction="#modificar" text="Modificar" />
       <Button layoutX="445.0" layoutY="539.0" mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
       <Label layoutX="187.0" layoutY="29.0" text="Inventario">

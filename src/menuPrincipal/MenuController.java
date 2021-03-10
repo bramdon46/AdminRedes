@@ -27,7 +27,7 @@ public class MenuController implements Initializable {
     }
     @FXML private void dispositivos(ActionEvent ev)
     {
-        
+         vt.goToDispositivos(ev);
     }
     @FXML private void configuraciones(ActionEvent ev)
     {
@@ -37,6 +37,11 @@ public class MenuController implements Initializable {
     {
         
     }
+     @FXML private void BuscarDispo(ActionEvent ev)
+    {
+        
+    }
+     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

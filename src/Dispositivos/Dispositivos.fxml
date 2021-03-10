@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dispositivos.DispositivosController">
+    <stylesheets>
+        <URL value="@dispositivos.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="4.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <ImageView fitHeight="390.0" fitWidth="593.0">
+                     <image>
+                        <Image url="@../../../Fondo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="73.0" layoutY="14.0" text="LOCALIZACION DE DISPOSITIVOS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="48.0" layoutY="111.0" mnemonicParsing="false" onAction="#BuscarDispo" prefHeight="45.0" prefWidth="89.0" text="Buscar">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <TableView fx:id="tablaDispositivos" layoutX="37.0" layoutY="164.0" prefHeight="200.0" prefWidth="502.0" style="-fx-background-color: teal;">
+        <columns>
+          <TableColumn fx:id="id_producto" prefWidth="163.0" text="Codigo" />
+          <TableColumn fx:id="nombre_producto" prefWidth="136.0" text="Nombre" />
+            <TableColumn fx:id="Loca_dispositivo" prefWidth="202.0" text="Localizacion" />
+        </columns>
+      </TableView>
+      <Button graphicTextGap="6.0" layoutX="372.0" layoutY="108.0" mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <AnchorPane layoutX="-8.0" layoutY="63.0" />
+   </children>
+</AnchorPane>

@@ -55,4 +55,19 @@ public class ventana {
             Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }
+    
+    public void goToDispositivos(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/Dispositivos/Dispositivos.fxml"));
+            Scene escena=new Scene(raiz);
+            primaryStage.setTitle("Menu Principal");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
 }
