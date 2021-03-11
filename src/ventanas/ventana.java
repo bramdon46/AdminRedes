@@ -55,4 +55,21 @@ public class ventana {
             Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
         } 
     }
+    
+    public void goToFallas(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/Fallas/Fallas.fxml"));
+            Scene escena=new Scene(raiz);
+//            image=new Image("/imagenes/icono.png");
+//            primaryStage.getIcons().add(image);
+            primaryStage.setTitle("Fallas");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
 }

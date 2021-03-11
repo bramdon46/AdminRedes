@@ -35,7 +35,7 @@ public class MenuController implements Initializable {
     }
     @FXML private void fallas(ActionEvent ev)
     {
-        
+        vt.goToFallas(ev);
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
