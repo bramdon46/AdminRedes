@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fallas.FallasController">
+    <stylesheets>
+        <URL value="@fallas.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="100.0" layoutY="14.0" text="Registro de Fallas" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDispo" layoutX="19.0" layoutY="92.0" prefHeight="25.0" prefWidth="332.0" />
+      <Label layoutX="19.0" layoutY="67.0" text="Dispositivo" />
+      <Label layoutX="19.0" layoutY="125.0" text="Descripcion de falla" />
+      <TextArea fx:id="txtDescrFalla" layoutX="19.0" layoutY="154.0" prefHeight="91.0" prefWidth="332.0" />
+      <TableView fx:id="tblFallas" layoutX="19.0" layoutY="337.0" prefHeight="130.0" prefWidth="332.0">
+        <columns>
+            <TableColumn fx:id="dispositivillo" prefWidth="167.0" text="Dispositivo" />
+            <TableColumn fx:id="fallita" prefWidth="163.0" text="Falla" />
+        </columns>
+        
+      </TableView>
+      <Button layoutX="23.0" layoutY="483.0" mnemonicParsing="false" onAction="#volverMenu" text="Menu" />
+      <Button layoutX="284.0" layoutY="483.0" mnemonicParsing="false" onAction="#editarFalla" text="Modificar" />
+      <Button layoutX="158.0" layoutY="483.0" mnemonicParsing="false" onAction="#nuevaFalla" text="Nuevo" />
+      <TextField fx:id="busacarFalla" layoutX="19.0" layoutY="288.0" />
+      <Label layoutX="18.0" layoutY="260.0" text="Buscar Falla" />
+   </children>
+</AnchorPane>

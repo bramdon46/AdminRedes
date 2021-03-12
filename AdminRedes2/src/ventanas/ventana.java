@@ -1,0 +1,105 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ventanas;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+/**
+ *
+ * @author bramdon
+ */
+public class ventana {
+    
+    public void menuPrincipal(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/menuPrincipal/menu.fxml"));
+            Scene escena=new Scene(raiz);
+//            image=new Image("/imagenes/icono.png");
+//            primaryStage.getIcons().add(image);
+            primaryStage.setTitle("Menu Principal");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    
+    public void goToInventario(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/inventario/inventario.fxml"));
+            Scene escena=new Scene(raiz);
+//            image=new Image("/imagenes/icono.png");
+//            primaryStage.getIcons().add(image);
+            primaryStage.setTitle("Menu Principal");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    
+    public void goToDispositivos(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/Dispositivos/Dispositivos.fxml"));
+            Scene escena=new Scene(raiz);
+            primaryStage.setTitle("Menu Principal");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    public void goToConfiguración(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/Configuración/Configuración.fxml"));
+            Scene escena=new Scene(raiz);
+//            image=new Image("/imagenes/icono.png");
+//            primaryStage.getIcons().add(image);
+            primaryStage.setTitle("Configuración");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    public void goToFallas(ActionEvent eve)
+    {
+        try {
+            Stage primaryStage=new Stage();
+            Parent raiz= FXMLLoader.load(getClass().getResource("/RegistroFallas/fallasRegistro.fxml"));
+            //Parent raiz= FXMLLoader.load(getClass().getResource("/Fallas/Fallas.fxml"));
+            Scene escena=new Scene(raiz);
+//            image=new Image("/imagenes/icono.png");
+//            primaryStage.getIcons().add(image);
+            primaryStage.setTitle("Fallas");
+            primaryStage.setScene(escena);
+            primaryStage.show();
+            ((Node)(eve.getSource())).getScene().getWindow().hide();
+        } catch (IOException ex) {
+            Logger.getLogger(ventana.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+}

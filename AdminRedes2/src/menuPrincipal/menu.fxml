@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menuPrincipal.MenuController">
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="184.0" layoutY="33.0" style="-fx-background-color: navy blue;" text="Menu principal" textFill="#ebe4e4">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Button layoutX="158.0" layoutY="182.0" mnemonicParsing="false" onAction="#inventario" style="-fx-background-color: silver;" text="Inventario">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="134.0" layoutY="317.0" mnemonicParsing="false" onAction="#dispositivos" style="-fx-background-color: silver;" text="Dispositivos">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="320.0" layoutY="108.0" mnemonicParsing="false" onAction="#configuraciones" style="-fx-background-color: silver;" text="Configuraciones">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="320.0" layoutY="257.0" mnemonicParsing="false" onAction="#fallas" style="-fx-background-color: silver;" text="Fallas">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

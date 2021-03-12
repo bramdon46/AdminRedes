@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="338.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistroFallas.FallasRegistroController">
+    <stylesheets>
+        <URL value="@fallasregistro.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table" editable="true" layoutX="21.0" layoutY="70.0" prefHeight="228.0" prefWidth="296.0">
+        <columns>
+            <TableColumn fx:id="dispo" prefWidth="147.0" text="Dispositivo" />
+          <TableColumn fx:id="falla" prefWidth="147.0" text="Falla" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="22.0" layoutY="317.0" text="Dispositivo" />
+      <TextField fx:id="txt_dispo" layoutX="21.0" layoutY="342.0" prefHeight="25.0" prefWidth="296.0" />
+      <TextArea fx:id="txt_falla" layoutX="22.0" layoutY="398.0" prefHeight="125.0" prefWidth="296.0" />
+      <Label layoutX="22.0" layoutY="373.0" text="Falla" />
+      <Button fx:id="btn_nuevo" layoutX="22.0" layoutY="543.0" mnemonicParsing="false" onAction="#nuevaFalla" text="Nuevo" />
+      <Button fx:id="btn_modificar" layoutX="136.0" layoutY="543.0" mnemonicParsing="false" onAction="#editarFalla" text="Modificar" />
+      <Button fx:id="menu" layoutX="270.0" layoutY="543.0" mnemonicParsing="false" onAction="#volverMenu" text="Menu" />
+      <TextField fx:id="txt_buscar" layoutX="21.0" layoutY="27.0" promptText="Buscar" />
+   </children>
+</AnchorPane>

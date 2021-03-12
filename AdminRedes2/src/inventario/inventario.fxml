@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventario.InventarioController">
+    <stylesheets>
+        <URL value="@inventario.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tablaInventario" editable="true" layoutX="20.0" layoutY="161.0" prefHeight="239.0" prefWidth="560.0" style="-fx-background-color: teal;">
+        <columns>
+          <TableColumn prefWidth="550.0" resizable="false" text="Inventario">
+               <columns>
+                <TableColumn fx:id="id_producto" minWidth="0.0" prefWidth="49.0" text="Codigo" />
+                  <TableColumn fx:id="nombre_producto" prefWidth="203.0" text="Nombre" />
+                  <TableColumn fx:id="marca_producto" prefWidth="130.0" text="Marca" />
+                  <TableColumn fx:id="cantidad_producto" prefWidth="46.0" text="Cantidad" />
+               </columns>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="busca" layoutX="30.0" layoutY="113.0" promptText="Buscador Tabla" />
+      <Button layoutX="453.0" layoutY="419.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button layoutX="453.0" layoutY="478.0" mnemonicParsing="false" onAction="#modificar" text="Modificar" />
+      <Button layoutX="445.0" layoutY="539.0" mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal" />
+      <Label layoutX="187.0" layoutY="29.0" text="Inventario">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="412.0" text="Codigo">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="458.0" text="Nombre">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="503.0" text="Marca">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="551.0" text="Cantidad">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codigoPro" layoutX="226.0" layoutY="419.0" />
+      <TextField fx:id="nombrePro" layoutX="226.0" layoutY="465.0" />
+      <TextField fx:id="marcaPro" layoutX="227.0" layoutY="510.0" />
+      <TextField fx:id="cantiPro" layoutX="227.0" layoutY="558.0" />
+   </children>
+</AnchorPane>
