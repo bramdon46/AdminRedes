@@ -1,16 +1,19 @@
-package Fallas;
+
+package RegistroFallas;
 
 import javafx.beans.property.SimpleStringProperty;
 
 
-public class falla {
+public class fallas {
+
     private final SimpleStringProperty id_dispo;
-    private final SimpleStringProperty id_descr;
+    private final SimpleStringProperty id_descrFalla;
     
-    public falla(String dispo, String fallaD)
+    public fallas(String dispositivo, String descripcionFalla)
     {
-        id_dispo=new SimpleStringProperty(dispo);
-        id_descr=new SimpleStringProperty(fallaD);
+        
+        id_dispo = new SimpleStringProperty(dispositivo);
+        id_descrFalla = new SimpleStringProperty(descripcionFalla);
     }
     
     public String getDispo()
@@ -19,8 +22,9 @@ public class falla {
     }
     public String getFalla()
     {
-        return id_descr.get();
+        return id_descrFalla.get();
     }
+    
     
     public void setDispositivo(String dispo)
     {
@@ -28,6 +32,7 @@ public class falla {
     }
     public void setFalla(String fallaD)
     {
-        id_descr.set(fallaD);
+        id_descrFalla.set(fallaD);
     }
+    
 }

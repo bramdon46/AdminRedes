@@ -32,15 +32,15 @@ import ventanas.ventana;
  */
 public class FallasController implements Initializable {
     @FXML private TableView<falla> tblFallas=new TableView();
-    @FXML TableColumn <falla, String> id_dispo;
-    @FXML TableColumn <falla, String> id_descr;
+    @FXML private TableColumn <falla, String> dispositivillo;
+    @FXML private TableColumn <falla, String> fallita;
     @FXML TextField txtDispo;
     @FXML TextArea txtDescrFalla;
     @FXML TextField busacarFalla;
     
-    public static ObservableList<falla> datosFalla=FXCollections.observableArrayList();
+    public static ObservableList<falla> datosFalla=FXCollections.observableArrayList(    );
     
-    FilteredList<falla> FiltroDatosFalla=new FilteredList<>(datosFalla, b -> true);
+    FilteredList<falla> FiltroDatosFalla=new FilteredList<>(datosFalla, c -> true);
     
     ventana vt=new ventana();
     /**
@@ -51,9 +51,9 @@ public class FallasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        id_dispo.setCellValueFactory(new PropertyValueFactory<>("id_dispo"));
-        id_descr.setCellValueFactory(new PropertyValueFactory<>("id_descr"));
-        buscador();
+        dispositivillo.setCellValueFactory(new PropertyValueFactory<>("dispositivillo"));
+        fallita.setCellValueFactory(new PropertyValueFactory<>("fallita"));
+        //buscador();
         select();
         
     }   
@@ -83,6 +83,7 @@ public class FallasController implements Initializable {
         if(!txtDescrFalla.getText().equals("") && !txtDispo.getText().equals(""))
         {
             datosFalla.add( new falla( txtDispo.getText(), txtDescrFalla.getText()));
+            tblFallas.setItems(datosFalla);
             JOptionPane.showMessageDialog(null,"Inventario actualizado");
             limpiar();
         }

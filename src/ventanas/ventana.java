@@ -60,7 +60,8 @@ public class ventana {
     {
         try {
             Stage primaryStage=new Stage();
-            Parent raiz= FXMLLoader.load(getClass().getResource("/Fallas/Fallas.fxml"));
+            Parent raiz= FXMLLoader.load(getClass().getResource("/RegistroFallas/fallasRegistro.fxml"));
+            //Parent raiz= FXMLLoader.load(getClass().getResource("/Fallas/Fallas.fxml"));
             Scene escena=new Scene(raiz);
 //            image=new Image("/imagenes/icono.png");
 //            primaryStage.getIcons().add(image);
