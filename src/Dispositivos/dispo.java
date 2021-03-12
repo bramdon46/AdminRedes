@@ -5,6 +5,7 @@
  */
 package Dispositivos;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import ventanas.ventana;
@@ -13,12 +14,51 @@ import ventanas.ventana;
  *
  * @author chino
  */
+
 public class dispo {
-     ventana vt=new ventana();
+     private final SimpleStringProperty id;
+    private final SimpleStringProperty nombre;
+    private final SimpleStringProperty locadispositivo;
+   
+     public dispo(String numero, String nom, String local) {
      
-    @FXML private void menuPrincipal(ActionEvent ev)
+         
+          id=new SimpleStringProperty(numero);
+        nombre=new SimpleStringProperty(nom);
+        locadispositivo=new SimpleStringProperty(local);
+        
+     }
+
+   public String getId()
     {
-        vt.menuPrincipal(ev);
+        return id.get();
     }
+
+    public String getNombre() {
+       return nombre.get();
+    }
+
+   public  String getLocal() {
+       return locadispositivo.get();
+    }
+     
+   
+     public void setId(String numero)
+    {
+        id.set(numero);
+    }
+    
+    public void setNombre(String nom)
+    {
+        nombre.set(nom);
+    }
+    public void setLocal(String local)
+    {
+        locadispositivo.set(local);
+    }
+     
+     
+    
+    
     
 }

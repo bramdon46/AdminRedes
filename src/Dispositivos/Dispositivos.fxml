@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dispositivos.DispositivosController">
+<AnchorPane id="AnchorPane" prefHeight="561.0" prefWidth="768.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dispositivos.DispositivosController">
     <stylesheets>
         <URL value="@dispositivos.css" />
     </stylesheets>
@@ -18,35 +18,47 @@
          <children>
             <AnchorPane>
                <children>
-                  <ImageView fitHeight="390.0" fitWidth="593.0">
-                     <image>
-                        <Image url="@../../../Fondo.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="73.0" layoutY="14.0" text="LOCALIZACION DE DISPOSITIVOS">
+                  <Label layoutX="146.0" layoutY="14.0" text="LOCALIZACION DE DISPOSITIVOS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
+                  <Button layoutX="38.0" layoutY="105.0" mnemonicParsing="false" onAction="#Buscador" prefHeight="45.0" prefWidth="89.0" text="Buscar">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="buscartext" layoutX="146.0" layoutY="105.0" prefHeight="39.0" prefWidth="301.0" promptText="BUSCAR">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Button layoutX="48.0" layoutY="111.0" mnemonicParsing="false" onAction="#BuscarDispo" prefHeight="45.0" prefWidth="89.0" text="Buscar">
-         <font>
-            <Font size="21.0" />
-         </font></Button>
-      <TableView fx:id="tablaDispositivos" layoutX="37.0" layoutY="164.0" prefHeight="200.0" prefWidth="502.0" style="-fx-background-color: teal;">
+      <TableView fx:id="tablaDispositivos" layoutX="37.0" layoutY="164.0" prefHeight="200.0" prefWidth="694.0" style="-fx-background-color: teal;">
         <columns>
-          <TableColumn fx:id="id_producto" prefWidth="163.0" text="Codigo" />
-          <TableColumn fx:id="nombre_producto" prefWidth="136.0" text="Nombre" />
-            <TableColumn fx:id="Loca_dispositivo" prefWidth="202.0" text="Localizacion" />
+          <TableColumn fx:id="id" prefWidth="210.0" text="ID" />
+          <TableColumn fx:id="nombre" prefWidth="221.0" text="Nombre" />
+            <TableColumn fx:id="locadispositivo" prefWidth="262.0" text="Localizacion" />
         </columns>
       </TableView>
-      <Button graphicTextGap="6.0" layoutX="372.0" layoutY="108.0" mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal">
+      <Button graphicTextGap="6.0" layoutX="564.0" layoutY="109.0" mnemonicParsing="false" onAction="#menuPrincipal" text="Menu Principal">
          <font>
             <Font size="21.0" />
          </font></Button>
       <AnchorPane layoutX="-8.0" layoutY="63.0" />
+      <TextField fx:id="idtext" layoutX="37.0" layoutY="386.0" promptText="ID" />
+      <TextField fx:id="nombretext" layoutX="273.0" layoutY="386.0" promptText="NOMBRE" />
+      <Button layoutX="105.0" layoutY="476.0" mnemonicParsing="false" onAction="#AgregarNuevo" text="Agregar">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button layoutX="332.0" layoutY="468.0" mnemonicParsing="false" onAction="#Modificar" text="Button">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <TextField fx:id="locatext" layoutX="507.0" layoutY="386.0" promptText="LOCALIZACION" />
    </children>
 </AnchorPane>

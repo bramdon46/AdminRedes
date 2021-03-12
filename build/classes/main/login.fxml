@@ -32,13 +32,14 @@
          <font>
             <Font size="23.0" />
          </font></TextField>
+      <PasswordField fx:id="txtContra" layoutX="248.0" layoutY="200.0" style="-fx-background-color: Ivory;">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </PasswordField>
       <Button layoutX="244.0" layoutY="285.0" mnemonicParsing="false" onAction="#entrar" style="-fx-background-color: white;" text="Entrar">
          <font>
             <Font size="28.0" />
          </font></Button>
-      <PasswordField fx:id="txtContra" layoutX="248.0" layoutY="200.0" style="-fx-background-color: Ivory;">
-         <font>
-            <Font size="23.0" />
-         </font></PasswordField>
    </children>
 </AnchorPane>

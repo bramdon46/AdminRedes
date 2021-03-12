@@ -31,11 +31,11 @@ public class MenuController implements Initializable {
     }
     @FXML private void configuraciones(ActionEvent ev)
     {
-        
+       vt.goToConfiguración(ev);
     }
     @FXML private void fallas(ActionEvent ev)
     {
-        
+        vt.goToFallas(ev);
     }
      @FXML private void BuscarDispo(ActionEvent ev)
     {
